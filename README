@@ -1,0 +1,12 @@
+kali-linuxをmac上で開きたい（GUI希望）
+
+参考
+https://medium.com/@airman604/kali-linux-in-a-docker-container-5a06311624eb
+https://github.com/XaviTorello/kali-full-docker
+https://github.com/rringler/kali-vnc
+https://4649-24.com/security/windows10-docker-kali-linux/
+
+```
+docker build -t kali .
+docker run -it kali
+```
