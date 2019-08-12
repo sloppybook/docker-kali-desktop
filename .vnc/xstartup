@@ -1,5 +1,9 @@
 #!/bin/sh
 
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+startxfce4 &
+
 xrdb $HOME/.Xresources
 xsetroot -solid grey
 #x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
