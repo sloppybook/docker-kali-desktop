@@ -4,6 +4,7 @@ kali-linuxをmac上で開きたい
 docker build -t docker-kali-desktop .
 docker run -it --rm -p 5901:5901 docker-kali-desktop bash
 
+# 今のことvncは手動です...
 # in docker
 vncserver :1
 
