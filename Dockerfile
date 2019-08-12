@@ -10,11 +10,13 @@ RUN apt-get update -y && \
 # x11vncいる？
 
 # apt-get install -y kali-linux-top10 git vim curl build-essential wget 
-# ADD .vnc /root/.vnc
-# RUN chmod 600 /root/.vnc/passwd
+COPY .vnc/xstartup /root/.vnc/xstartup
+COPY .vnc/passwd /root/.vnc/passwd
+RUN chmod 755 /root/.vnc/passwd /root/.vnc/xstartup
 
+CMD /usr/bin/vncserver :1 -geometry 1280x800 -depth 24 && tail -f /root/.vnc/*:1.log
 # ADD startup.sh /startup.sh
-# CMD /usr/bin/vncserver :1 &
+# CMD vncserver :1
 # RUN chmod 0755 /startup.sh
 # RUN ./startup.sh
 # CMD vncserver :1 && tail
