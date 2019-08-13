@@ -1,13 +1,12 @@
-kali-linuxをmac上で開きたい
+# Kali Linux Desktop Dockerfile
+Docker container for kali-linux-docker including desktop and vncserver.
 
+# How to Run
 ```
-docker build -t docker-kali-desktop .
-docker run -p 5901:5901 docker-kali-desktop
-
-# 今のことvncは手動です...
-# in docker
-vncserver :1
-
-# in mac
-vnc://localhost:5901
+docker run -p 5901:5901 sloppybook/docker-kali-desktop
 ```
+
+and then connect to:
+`vnc://<host>:5901` via VNC client.
+
+The VNC password is `password`.
